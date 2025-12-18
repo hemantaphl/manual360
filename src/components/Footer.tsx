@@ -17,7 +17,7 @@ const Footer = () => {
             className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
           >
             <Mail className="w-5 h-5" strokeWidth={1.5} />
-            contact@manual360.com
+            manual360@hemantaphuyal.com
           </a>
         </div>
         <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
