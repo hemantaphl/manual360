@@ -18,7 +18,7 @@ const HeroSection = () => {
         </p>
         <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
         <Button asChild size="lg" className="text-base px-8 py-6">
-            <a href="demo.manual360.hemantaphuyal.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://demo.manual360.hemantaphuyal.com" target="_blank" rel="noopener noreferrer">
                 View Training Prototype
             </a>
         </Button>
