@@ -10,6 +10,8 @@ const Navigation = () => {
     { href: "#how-it-works", label: "How It Works" },
     { href: "#services", label: "Services" },
     { href: "#team", label: "Team" },
+    { href: "#marketing-plan", label: "Marketing Plan" },
+    { href: "#clients", label: "Client Focus" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -22,7 +24,7 @@ const Navigation = () => {
           </a>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -32,6 +34,14 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
+            <a
+              href="https://manual360.hemantaphuyal.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-colors"
+            >
+              View Prototype
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

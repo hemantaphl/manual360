@@ -1,4 +1,4 @@
-import { Building2, ShieldCheck, Target } from "lucide-react";
+import { Building2, ShieldCheck, Target, CheckCircle } from "lucide-react";
 
 const ClientFocusSection = () => {
   const focusPoints = [
@@ -19,27 +19,43 @@ const ClientFocusSection = () => {
     }
   ];
 
+  const benefits = [
+    "Supports safety compliance and induction training",
+    "Improves engagement through immersive learning",
+    "Helps reduce manual handling injury risk"
+  ];
+
   return (
-    <section id="clients" className="py-24 px-6 bg-secondary">
+    <section id="clients" className="py-24 px-6">
       <div className="container max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-primary">
           Client Focus
         </h2>
-        <p className="text-lg text-center text-muted-foreground max-w-3xl mx-auto mb-16">
-          Developed for logistics and warehouse clients such as Joint Venture. 
-          Our training solutions emphasise safety compliance and employee engagement.
+        <p className="text-lg text-center text-foreground/80 max-w-3xl mx-auto mb-8">
+          Developed for logistics and warehouse clients such as Joint Venture.
         </p>
+        
+        {/* Benefits List */}
+        <div className="flex flex-col items-center gap-3 mb-16">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-primary" strokeWidth={1.5} />
+              <span className="text-foreground/80">{benefit}</span>
+            </div>
+          ))}
+        </div>
+
         <div className="grid md:grid-cols-3 gap-8">
           {focusPoints.map((point, index) => (
             <div 
               key={index} 
               className="text-center p-6 bg-background rounded-lg border border-border"
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full border-2 border-primary mb-4">
                 <point.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
               </div>
               <h3 className="text-lg font-semibold mb-2">{point.title}</h3>
-              <p className="text-muted-foreground text-sm">{point.description}</p>
+              <p className="text-foreground/80 text-sm">{point.description}</p>
             </div>
           ))}
         </div>
